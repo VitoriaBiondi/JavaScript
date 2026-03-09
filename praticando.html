@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //---TIPOS PRIMITIVOS----------
+        //1 String--texto, sempre entre aspas
+        let nome = "Ana"; //aspas duplas
+        let cidade = 'São Paulo' //aspas simples
+        let menssagem = `Olá, ${nome}!`; //template literal(moderno)
+        console.log(mensagem);//->"Olá, Ana!"
+
+         //2 Number - números(inteiros e decimais)
+        let pontos = 100;
+        let temperatura = 36.7;
+        let saldo = -50;//pode ser negativo
+
+        //3. Boolean - verdadeiro ou Falso
+        let estaLogado = true;
+        let temDesconto = false;
+
+        //4. UnderFined - varíavel declarada mas sem valor
+        let resultado;
+        console.log(resultado);//-> underfined
+
+        //5. Null - ausência intencional de valor
+        let usuarioAtivo = null;
+
+        //Descobrir o tipo de qualquer valor
+        console.log(typeof nome); //-> "String"
+        console.log(typeof pontos); //-> "number"
+        console.log(typeof estaLogado); //-> "boolean"
+
+        //--OPERADORES ARITIMETICOS------------
+        let a = 10, b = 3;
+        
+        console.log(a + b);  // -> 13 (adição)
+        console.log(a - b);  // -> 7 (subtração)
+        console.log(a * b);  // -> 30 (multiplicação)
+        console.log(a / b);  // -> 3.33 (divisão)
+        console.log(a % b);  // -> 1 (resto da divisão)
+        console.log(a ** b);  // -> 13 (potência: 10³)
+
+
+        //--OPERADORES DE COMPARAÇÃO-----------
+
+        console.log(5 === 5);   //-> true (igual em valor e tipo)
+        console.log(5 !== 3);   //-> true (diferente)
+        console.log(10 > 8);   //-> true (maior que)
+        console.log(5 <= 5);   //-> true (menor ou igual)
+        
+        // CUIDADO: == VS ===
+        console.log(5 == "5")  // -> true (traz conversão automatica)
+        console.log(5 === "5")  // -> false (mais rigoroso, prefira este!)
+
+        //-----OPERADORES LOGICOS ------------------
+        console.log(true && false);  // -> false (E: ambos precisam ser true)
+        console.log(true || false);  // -> true (OU: basta um ser true)
+        console.log(!true);  // -> false (NÃO: inverte o valor)
+
+        //--CONCATENAÇÃO DE STRINGS-----------------
+        let primeiroNome = "João";
+        let sobrenome = "silva"; 
+        let nomeCompleto = primeiroNome + " " + sobrenome;
+        console.log(nomeCompleto);  //->"João Silva"
+
+        // Forma moderna com templete literals
+        console.log(`Nome: ${primeiroNome} ${sobrenome}`); //Nome: "João Silva"
+        
+
+
+
+
+
+
+ 
+    </script>
+</body>
+</html>
