@@ -67,13 +67,30 @@
 
         //--CONCATENAÇÃO DE STRINGS-----------------
         let primeiroNome = "João";
-        let sobrenome = "silva"; 
+        let sobrenome = "Silva"; 
         let nomeCompleto = primeiroNome + " " + sobrenome;
         console.log(nomeCompleto);  //->"João Silva"
 
         // Forma moderna com templete literals
         console.log(`Nome: ${primeiroNome} ${sobrenome}`); //Nome: "João Silva"
-        
+
+        // ---FORMA CLASSICA (Function declaration)-------
+        function saudar(nome) {
+            return `Ola, &{nome}! Bem-vindo ao JavaScript!`;
+        }
+
+        // Chamando a função 
+        let mensagem = saudar("Ana");
+        console.log(mensagem);  //-> "Ola, Ana! Bem-vinda ao JavaScript!"
+        console.log(saudar("Carlos"));  //-> "Ola, Carlos! Bem-vindo..."
+
+        //-----FUNÇÃO COM MULTIPLOS PARAMETROS--------
+        function calcularArea(Largura, altura) {
+        let area = largura * altura;
+        return area; 
+        }
+
+
 
 
 
