@@ -105,14 +105,27 @@
         console.log(somar(4, 6));  // -> 10
 
         //---PARAMETROS PADRÃO-----------
-        
 
+        // -- ESCOPO GLOBAL VS. LOCAL------
+        let nome = "Global";  // <- visivel em todo lugal
 
+        function minhaFuncao(){
+        let sobrenome = "Local"; // <- so existe aqui dentro
+        console.log(nome);  // -> "Global" (função acessa o externo)
+        console.log(sobrenome);  // -> "Local"
+        }
 
+        minhaFuncao();
+        console.log(nome);  // -> "Global"
+        // console.log(sobrenome); X Erro! sobrenome nao exste aqui
 
+        //---ESCOPO DE BLOCO(let e const)-------
+        if(true) {
+            let dentroDoIf = "so aqui";
+            console.log(dentroDoIf);  // -> "so aqui"
+        }
 
-
-
+        // console.log(dentroDoIf); X Erro! fora dp bloco
 
  
     </script>
