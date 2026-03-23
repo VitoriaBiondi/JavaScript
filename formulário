@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formulario.css">
+    <title>Formulario de Cadastro</title>
+</head>
+<body>
+    <div class="contorno">
+    <h1>Ficha cadastral</h1>
+    <p>Preencha os campos abaixo com suas informações para se cadastrar 
+        em nosso banco de talentos!</p>
+        <p>É importante que nenhum campo fique em branco para facilitar nosso contato com você</p>
+        <input type="text" id="nomeDigitado" placeholder="Nome"> <br><br>
+        <input type="text" id="emailDigitado" placeholder="E_mail"> <br><br>
+        <input type="text" id="enderecoDigitado" placeholder="Endereço"> <br><br>
+        <button onclick="validarFormulario()">Cadastrar</button>
+    </div>
 
+    <script>
+        //objeto para pegar referencia do campo de texto
+
+        document.getElementById("nomeDigitado").focus();
+
+        function validarFormulario(){
+            let nome = document.getElementById("nomeDigitado").value;
+            let email = document.getElementById("emailDigitado").value;
+            let endereco = document.getElementById("enderecoDigitado").value;
+            
+
+            if (nome === "") {
+                alert("Por favor, preencha o campo nome.");
+                document.getElementById("nomeDigitado").style.boxShadow = "3px 3px 5px yellow";
+                return false;
+            }
+
+            else if (email === "") {
+                alert("Por favor, preencha o campo Email.");
+                document.getElementById("emailDigitado").style.boxShadow = "3px 3px 5px yellow";
+                return false;
+            }
+
+            else if (endereco === "") {
+                alert("Por favor, preencha o campo Endereço.");
+                document.getElementById("enderecoDigitado").style.boxShadow = "3px 3px 5px yellow";
+                return false;
+            }
+
+            return true;
+
+        }
+        
+        
+    </script>
+    
+</body>
+</html>
